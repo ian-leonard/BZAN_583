@@ -1,0 +1,106 @@
+---
+title: "Syllabus"
+editor: source
+---
+
+::: {layout="[2,1.2]"}
+Department of Business Analytics and Statistics\
+Haslam College of Business\
+The University of Tennessee
+
+$\qquad$
+
+**BZAN 583 Special Topics**
+
+2024 Spring Semester - 2^nd^ Session
+
+**High Performance Computing for Data Science with R**
+
+**Instructor:** Dr. George Ostrouchov \[pronounced: ost-ruh-kov\]
+
+**Time:** 4:05 - 5:20 Mondays and Wednesdays
+
+**E-mail:** go\@tennessee.edu
+
+**Room:** HBB 132
+
+**Office Hours:** Wednesdays 9:00 - 9:30 and Thursdays 11-12. Other times possible by arrangement. Office: 206D (last sliding glass door cubicle)
+:::
+
+## BACKGROUND
+
+This course presents a high performance computing (HPC) view of some statistical and machine learning algorithms. It centers on a high-level view of today's HPC architectures and parallel computing concepts for data science, along with practical exercises on a modern HPC cluster system.
+
+### Prerequisites:
+
+This course will build on the R content of BZAN 542. Students should have a basic understanding of R, at least at the level of Part I in [Prof. Matloff's fastR](https://github.com/matloff/fasteR).
+
+### History of this Course: 
+
+It is the first time this course has been offered so there will be some rough edges and some material provided “just in time.” Much of the material was recently presented in data science and HPC conference tutorials and is being adapted to this half-semester course. I welcome any suggestions and corrections to improve the material.
+
+```{=html}
+<!-- Instructor notes
+\### Proposed Lecture Topics (to be reduced, reordered, and coordinated) {.unnumbered}
+
+-   Introductions, overview, form groups, R review, workflow assignment\
+-   Workflow introduction: RStudio to GitHub to HPC platform.\
+-   Bare basics of working with Unix (look/create/delete/copy files)\
+-   We plan to work with the [TLC](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) large taxi ride data set to get some experience with large data I/O.\
+-   What is parallel computing? Introduction to HPC architectures, resource managers, and cloud computing.\
+-   Shared memory parallel computing with R (package **parallel** and multithreaded math libraries **FlexiBLAS**, **OpenBLAS**).\
+-   Distributed memory parallel computing with R (package **pbdMPI**)\
+-   Methodology choices:
+    -   Random forest, serial, shared memory, and distributed memory versions\
+    -   Regularized polynomial regression via **polyreg** package\
+    -   Classification via projection onto trained basis functions\
+    -   Deep Learning through the use of **torch** (the R interface to the PyTorch C++ library) or Large Language Models introduction (Hugging Face models), but not both.
+
+The class will have two tracks that support each other: (1) a description of HPC concepts, some history to support the "why of HPC", and a practical track that uses a few tools to experiment with the HPC concepts on real HPC systems.
+-->
+```
+## Software: 
+
+On your laptop, make sure you have a current version of (or install): [R](https://www.r-project.org), [RStudio](https://www.rstudio.com), and [git](https://git-scm.com/). Also, create a free account on [GitHub](https://github.com/) if you don't have one already.
+
+Code development will be presented with RStudio, so comfort with using RStudio helps, but other development environments (such as Jupyter) can be used. However, if you are not using RStudio, I may be of limited help in troubleshooting your IDE issues. Remote computing will be on the [Delta cluster](https://docs.ncsa.illinois.edu/systems/delta/en/latest/?source=wiki#) at the National Center for Supercomputing Applications (NCSA), which we will access with `ssh` and transfer codes via GitHub. You should have a GitHub personal account (free) and I will provide you with an account on Delta. Computing on the Delta cluster will be via submission of batch scripts to its [Slurm](https://slurm.schedmd.com/overview.html) workload manager.
+
+## Grading, Groups, Assignments, and Project: 
+
+#### Groups:
+
+The class will be divided into groups of mostly 4, some 3, that are encouraged to work together. It is highly recommended for all group members to actively begin coding independently, discussing things but not just copying work of one group member. Your ability to work with HPC concepts after the class will depend directly on the amount of trial-and-error experience that you put into the assignments and project.
+
+#### Assignments:
+
+This course will have 6 assignments (one each of the first 6 weeks) that are **assigned on Monday** and are **due by 23:59 on the following Sunday**. They may depend on material presented on Monday and Wednesday of the same week. If R code development is part of the assignment, it must reproduce your results when run by the instructor.
+
+#### Project:
+
+In addition, there will be a group project culminating in a **5-minute lightning presentation in the last class on Monday, May 6**.
+
+**Each group's project plan must be defined and approved by the end of the second week (Friday, March 29).** Each group should make an appointment with the instructor to discuss their project proposal. The project will consist of a **specific large data set** of your choosing and a **hypothesis to be examined** with statistical and machine learning methods. The main objective is to successfully exercise several HPC methods (e.g. faster, parallel, analysis or larger data enabled by methods learned in class). A great discovery from the data is not required, although that would be the icing on the cake.  
+
+#### Grading:
+
+The weekly assignments are worth 12% each and the project with presentation is 25%. Assignments will vary individual submissions and group submissions. In group submissions, all members receive the same grade. At the end of the course all members will evaluate and specify the kind of their own and others' relative contributions. The remaining 3% will be based on these evaluations and on class attendance, which will be taken at each lecture.
+
+#### Late submission policy:
+
+50% of the grade if submitted the following week. Zero after that.
+
+## Data 
+
+Several cities have started publishing data about their operation and about various available services. Perhaps the best known is the [New York City data](https://opendata.cityofnewyork.us/), where [TLC](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) is a well-known very large taxi ride data set. Knoxville has also joined this trend [Knoxville Open Data](https://www.knoxvilletn.gov/government/opendata). Another interesting collection of data is at the University of Washington. A broader list of available data for projects is at [careerfoundry](https://careerfoundry.com/en/blog/data-analytics/where-to-find-free-datasets/) and a somewhat overlapping [Database Star](https://www.databasestar.com/free-data-sets/). For your project, find a data set that is at least 1 GB in size.
+
+## Optional Reading: 
+[Happy Git and GitHub for the useR](https://happygitwithr.com/)  
+[The Art of R Programming](https://utk.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma9925646348902311&context=L&vid=01UTN_KNOXVILLE:01UTK&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any%2Ccontains%2CThe%20Art%20of%20R%20Programming%3A%20A%20Tour%20of%20Statistical%20Software%20Design) by Norman Matloff\
+[Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham.\
+[Large Language Models](https://blogs.rstudio.com/ai/posts/2023-06-20-llm-intro/) and their use in [coding](https://michelnivard.github.io/gptstudio/ \
+[R torch](https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/) \
+For a deeper dive into HPC, consider [The Science of Computing](https://web.corral.tacc.utexas.edu/CompEdu/pdf/stc/EijkhoutIntroToHPC.pdf) by Viktor Eijkhout with Edmond Chow and Robert van de Geijn.  
+
+## Interesting links: 
+
+There is a number of great websites and podcasts that provide additional interesting information. See for instance [R-bloggers](https://www.r-bloggers.com), [R Graph Gallery](https://www.r-graph-gallery.com/portfolio/ggplot2-package/), [Towards Data Science](https://towardsdatascience.com), [R Weekly](https://rweekly.org).

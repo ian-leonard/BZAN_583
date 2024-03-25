@@ -1,0 +1,107 @@
+---
+title: "Week 1 Assignment: Setup, Installations, and first Unix Steps"
+editor: source
+engine: knitr
+---
+
+## Install on your Laptop
+
+* Current version of R from [CRAN](https://cran.r-project.org/)  
+* Current version of RStudio Desktop from [posit](https://posit.co/downloads/)  
+* Current `git` version as described in [happywithgit.com](https://happygitwithr.com/install-git.html)  
+
+## Create a personal account on [github.com](https://github.com)  
+
+* Go to [github.com](https://github.com) and Sign up for a GitHub free personal account  
+* If you already have one, you can continue to use it for this class  
+
+
+## Setup your NCSA Delta Account
+
+<!--
+Instructor notes for adding Delta users to allocated project:  
+See "Adding account holders to a group or project" on [Delta Webpage](https://wiki.ncsa.illinois.edu/display/USSPPRT/NCSA+Allocation+and+Account+Management) for general directions.
+
+Specifically, see "Inviting new people to your project" for information on inviting persons who do not have an NCSA account.
+-->
+<!--
+It appears the above is incorrect for ACCESS managed allocations. The above is for NCSA local allocations outside ACCESS!
+
+To add students to an ACCESS allocation, the student first needs to register an ACCESS login. Then email the login name to the Instructor (allocation PI) who will add the student to the specific allocation.
+
+Still not clear what username will be used for Delta, but most likely the ACCESS login.
+-->
+
+To set up an account on Delta, first register at the [ACCESS link](https://registry.access-ci.org/registry/co_petitions/start/coef:8). Then email the instructor your user id from the registration. The instructor can add you the the Delta resource allocation at this point.
+
+It takes a day or two to receive access to `login.delta.ncsa.illinois.edu`. Until then, you may see the message "too many authentication failures." When you have access, login via ssh to  `<your-delta-username>@login.delta.ncsa.illinois.edu`. This will request your password and ask whether to do a DUO-push to your mobile phone. Below is an example with your instructor's username login from a Mac Terminal shell. Only the first line is an interaction with the Mac shell (% prompt) and the rest is coming from the Delta login node ($ prompt).
+<!-- using bash triggers Jupyter engine? r works but not ideal -->
+```{bash}
+#| echo: true
+#| eval: false
+
+ost@GO ~ % ssh gostrouc@login.delta.ncsa.illinois.edu
+
+NCSA Delta System
+
+Login with NCSA Kerberos + NCSA Duo multi-factor.
+
+DUO Documentation:  https://go.ncsa.illinois.edu/2fa
+
+gostrouc@login.delta.ncsa.illinois.edu's password: 
+(gostrouc@login.delta.ncsa.illinois.edu) Duo two-factor login for gostrouc
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-1037
+
+Passcode or option (1-1): 1
+Success. Logging you in...
+dt-login02.delta.ncsa.illinois.edu (141.142.140.195)
+  OS: RedHat 8.8   HW: HPE   CPU: 128x    RAM: 252 GB
+
+      ΔΔΔΔΔ    ΔΔΔΔΔΔ   ΔΔ     ΔΔΔΔΔΔ   ΔΔ
+      ΔΔ  ΔΔ   ΔΔ       ΔΔ       ΔΔ    ΔΔΔΔ
+      ΔΔ  ΔΔ   ΔΔΔΔ     ΔΔ       ΔΔ   ΔΔ  ΔΔ
+      ΔΔ  ΔΔ   ΔΔ       ΔΔ       ΔΔ   ΔΔΔΔΔΔ
+      ΔΔΔΔΔ    ΔΔΔΔΔΔ   ΔΔΔΔΔΔ   ΔΔ   ΔΔ  ΔΔ
+
+  User Guide:  https://go.ncsa.illinois.edu/deltauserdoc
+
+
+Last failed login: Mon Mar 18 18:54:12 CDT 2024 from 73.121.22.186 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+[gostrouc@dt-login02 ~]$ 
+```
+Delta user assistance tells me to ignore the "1 failed login" message. If you still need login help, email `help@ncsa.illinois.edu`.
+
+To log out, `exit` at the `$` prompt.
+
+**Result 1:** Turn in a copy of your session running the following shell commands in the sequence given on a Delta login node.  The intent here is to verify that you can successfully connect to a Delta login node and run a few basic Unix commands.
+
+```{bash}
+#| echo: true
+#| eval: false
+
+hostname
+date
+w
+whoami
+ls
+pwd
+mkdir R
+ls
+ls -a
+ls -la
+ls -laF --color
+cd R
+pwd
+cd
+pwd
+module load r
+module list
+Rscript -e "sessionInfo()"
+```
+**Result 2:** Use the `man` command to get a description of what each command does. Use `man man` to get an explanation of the `man` command. Turn in a short one-sentence description for each unique command. 
+
+**Result 3:** From GitHub ... your GitHub user id. So I can invite you to the BZAN-583 team in the HPCinR organization.

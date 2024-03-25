@@ -1,0 +1,18 @@
+---
+title: "Distributed Computing"
+editor: source
+---
+
+Distributed computing for multinode computation
+
+[Full Screen](slides.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+<!--
+* distributed memory from R4HPC
+
+-->
+

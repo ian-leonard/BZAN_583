@@ -1,0 +1,21 @@
+DEV NOTES
+
+Sources:
+* go-ski/ASwR - Charles - book parts, class slides, and exercises
+* go-ski/pics - is a pictures repository shared by BZAN_583 and by HPCinR_book. GO repo clone has more
+* RBigData/R4HPC - slides for OLCF class
+* RBigData/ROBUST2022 - a shortened version of Charles class slides
+* RBigData/KPMS-IT4I-EX - exercises for Charles class
+* RBigData/KPMS-IT4I - pdf version of Charles class
+
+TODO:
+* make a table of r packages (abstractions) and the underlying approaches they can use
+* Looks like GitHub classroom connection to Canvas is an Admin job
+  * Is it possible that no UTK class has yet been connected?
+
+UPDATE  
+* https://stat.ethz.ch/pipermail/r-sig-hpc/2022-August/002144.html directions  
+  * `export CMAKE_PREFIX_PATH=$HOMEBREW_CELLAR/openblas:$CMAKE_PREFIX_PATH`  
+  * flexiblas on macOS has issues with @rpath and LC_RPATH  
+* Hexagon for pbdMPI
+  
